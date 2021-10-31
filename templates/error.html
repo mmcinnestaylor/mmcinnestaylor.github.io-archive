@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}{{ error_code }} | {% endblock %}
+
+{% block content %}
+<h3 class="responsive-margin">{{ error_code }}</h3>
+<p class="responsive-margin">{{ error_description }}</p>
+{% endblock %}

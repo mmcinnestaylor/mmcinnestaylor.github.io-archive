@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<title>{% block title %}{% endblock %}Marlan McInnes-Taylor</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Marlan McInnes-Taylor">
+		<meta name="description" content="Homepage of Marlan McInnes-Taylor, Artificial Intelligence researcher.">
+		<meta name="keywords"
+			content="Marlan, Marlan McInnes, Marlan Taylor, McInnes-Taylor, Marlan McInnes-Taylor,  mmcinnestaylor">
+
+		<!-- Page Specific Elements
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		{% block head %}{% endblock %}
+
+		<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- FONT
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+		<!-- CSS and Icons
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+		<script src="https://kit.fontawesome.com/7814f8aa4c.js" crossorigin="anonymous"></script>
+
+		<!-- Favicon
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ0560QKBT"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+
+			gtag('config', 'G-WZ0560QKBT');
+		</script>
+	</head>
+
+	<body>
+		<!-- Primary Page Layout
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+		<div class="container">
+			<header>
+				<a href="#" class="button">Home</a>
+			</header>
+			<div class="row">
+				<div class="col-sm-12 col-md-3 col-lg-3">
+					<img src="images/headshot.jpeg" alt="Headshot" height="200px" id="headshot" />
+				</div>
+				<div class="col-sm-12 col-md-9 col-lg-9">
+					<h1>Marlan McInnes-Taylor</h1>
+
+					<p>Department of Computer Science<br />
+						The University of Texas at Austin<br />
+						2317 Speedway<br />
+						Austin, TX 78712<br />
+					</p>
+
+					<p>
+						<strong>Contact:</strong>&puncsp;<a href="mailto:marlan@cs.utexas.edu">marlan@cs.utexas.edu</a>
+						<br />
+						<strong>CV:</strong>&puncsp;<a
+							href="https://drive.google.com/uc?export=download&id=1ahKGNEGhLTyfgLYYGunMHyAHnEPP7dXp"
+							target="_blank" title="Curriculum Vitae">Download</a>
+						<br />
+
+						<a href="https://www.linkedin.com/in/mmcinnestaylor" target="_blank" rel="external"
+							title="Linkedin"><i class="fa fa-linkedin fa-lg social-icon"></i></a>
+						&puncsp;
+						<a href="https://github.com/mmcinnestaylor" target="_blank" rel="external" title="GitHub"><i
+								class="fab fa-github fa-lg social-icon"></i></a>
+						&puncsp;
+						<a href="https://scholar.google.com/citations?user=zOXxor8AAAAJ" target="_blank" rel="external"
+							title="Google Scholar"><i class="ai ai-google-scholar ai-lg social-icon"></i></a>
+						&puncsp;
+						<a href="https://twitter.com/mmcinnestaylor" target="_blank" rel="external" title="Twitter"><i
+								class="fab fa-twitter fa-lg social-icon"></i></a>
+					</p>
+				</div>
+			</div>
+
+			<hr />
+
+			<main>{% block content %}{% endblock %}</main>
+
+			<footer>
+				<em><small>Site updated: {{ updated_on }}</small></em>
+			</footer>
+		</div>
+		<!-- End Document
+	–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	</body>
+</html>
