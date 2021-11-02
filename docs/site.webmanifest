@@ -1,0 +1,20 @@
+{
+	"name":"Marlan McInnes-Taylor",
+	"short_name":"mmcinnestaylor",
+	"description": "Homepage of Marlan McInnes-Taylor, Artificial Intelligence researcher.",
+	"start_url": "https://www.mmcinnestaylor.com",
+	"icons":[
+		{
+			"src":"images/android-chrome-192x192.png",
+			"sizes":"192x192",
+			"type":"image/png"
+		},{
+			"src":"images/android-chrome-512x512.png",
+			"sizes":"512x512",
+			"type":"image/png"
+		}
+	],
+	"theme_color":"#7f5757",
+	"background_color":"#fffafa",
+	"display":"standalone"
+}
