@@ -57,7 +57,7 @@ title: Home
 		<ul>
 			<li>Florida State University USER Lab</li>
 			<li>January 2020 - April 2021</li>
-			<li>Supervisor: Dr. Chris Mills</li>
+			<li>Supervisor: <a href="https://chrisryanmills.com/" target="_blank" rel="external">Dr. Chris Mills</a></li>
 			<li>Topic: Automating Software Traceability Link Recovery utilizing Word Embeddings within a Shallow Neural
 				Network</li>
 		</ul>
@@ -67,7 +67,7 @@ title: Home
 		<ul>
 			<li>Undergraduate Thesis</li>
 			<li>August 2019 - May 2020</li>
-			<li>Supervisors: Dr. Sonia Haiduc, Ms. Sharanya Jayaraman</li>
+			<li>Supervisors: <a href="https://www.cs.fsu.edu/~shaiduc/" target="_blank" rel="external">Dr. Sonia Haiduc</a>, <a href="https://www.cs.fsu.edu/~jayarama/" target="_blank" rel="external">Ms. Sharanya Jayaraman</a></li>
 			<li>Topic: Skin Cancer Detection and Classification using an Artificial Neural Network</li>
 		</ul>
 	</li>
