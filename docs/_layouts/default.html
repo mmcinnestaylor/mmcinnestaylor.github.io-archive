@@ -41,6 +41,31 @@
 	<link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/assets/icons/favicon.ico">
 	<link rel="manifest" href="{{ site.url }}/site.webmanifest">
 
+	<script>
+		const desiredRepo = "mmcinnestaylor.github.io";
+		const dateTagID = "updated"; // The HTML element you want to update
+		var xhttp = new XMLHttpRequest();
+		
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				let repos = JSON.parse(this.responseText);
+
+				repos.forEach((repo) => {
+					if (repo.name == desiredRepo) {
+						var lastUpdated = new Date(repo.updated_at);
+						var day = lastUpdated.getUTCDate();
+						var month = lastUpdated.getUTCMonth();
+						var year = lastUpdated.getUTCFullYear();
+						document.getElementById(dateTagID).innerHTML = `Last updated: ${year}-${month}-${day}`;
+					}
+				});
+			}
+		};
+
+		xhttp.open("GET", "https://api.github.com/users/mmcinnestaylor/repos", true);
+		xhttp.send();
+	</script>
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ0560QKBT"></script>
 	<script>
@@ -64,7 +89,7 @@
 		<main>{{ content }}</main>
 
 		<footer>
-			<em><small>Updated: November 11, 2021</small></em>
+			<em><small id="updated"></small></em>
 		</footer>
 	</div>
 	<!-- End Document
