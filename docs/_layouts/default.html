@@ -54,7 +54,7 @@
 					if (repo.name == desiredRepo) {
 						var lastUpdated = new Date(repo.pushed_at);
 						var day = lastUpdated.getUTCDate();
-						var month = lastUpdated.getUTCMonth();
+						var month = lastUpdated.getUTCMonth() + 1;
 						var year = lastUpdated.getUTCFullYear();
 						document.getElementById(dateTagID).innerHTML = `Last updated: ${year}-${month}-${day}`;
 					}
