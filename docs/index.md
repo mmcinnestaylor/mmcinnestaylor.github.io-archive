@@ -18,9 +18,9 @@ title: Home
 			<strong>Contact:</strong>&puncsp;<a href="mailto:marlan@cs.utexas.edu">marlan@cs.utexas.edu</a>
 			<br />
 			<strong>CV:</strong>&puncsp;<a
-				href="{{ site.url }}/assets/files/mmcinnestaylor_cv.pdf"
+				href="{{ site.url }}/assets/docs/mmcinnestaylor_cv.pdf"
 				target="_blank" title="Curriculum Vitae">View</a>&puncsp;<small>[<a
-				href="{{ site.url }}/assets/files/mmcinnestaylor_cv.pdf"
+				href="{{ site.url }}/assets/docs/mmcinnestaylor_cv.pdf"
 				target="_blank" title="Curriculum Vitae" download>Download</a>]</small>
 			<br />
 			<a href="https://www.linkedin.com/in/mmcinnestaylor" target="_blank" rel="external"
