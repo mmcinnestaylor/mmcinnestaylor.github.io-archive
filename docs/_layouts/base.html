@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Basic Page Needs
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	{% if page.title == "Home" %}
+	<title>Marlan McInnes-Taylor</title>
+	{% else %}
+	<title>{{ page.title }}&puncsp;|&puncsp;Marlan McInnes-Taylor</title>
+	{% endif %}
+	<meta charset="utf-8"/>
+	<meta name="author" content="Marlan McInnes-Taylor"/>
+	<meta name="description" content="Homepage of Marlan McInnes-Taylor, Artificial Intelligence researcher."/>
+	<meta name="keywords"
+		content="Marlan, Marlan McInnes, Marlan Taylor, McInnes-Taylor, Marlan McInnes-Taylor,  mmcinnestaylor"/>
+	{% if page.noindex and page.nofollow %}
+	<meta name="robots" content="noindex, nofollow"/>
+	{% elsif page.noindex %}
+	<meta name="robots" content="noindex"/>
+	{% elsif page.nofollow %}
+	<meta name="robots" content="nofollow"/>
+	{% endif %}
+
+	<!-- Mobile Specific Metas
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- FONT
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"> -->
+
+	<!-- CSS Framework and Icons
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+	<script src="https://kit.fontawesome.com/7814f8aa4c.js" crossorigin="anonymous"></script>
+
+	<!-- Page Specific CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.style }}.css">
+
+	<!-- Favicon
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/assets/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ site.url }}/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ site.url }}/assets/icons/favicon-16x16.png">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ site.url }}/assets/icons/favicon.ico">
+	<link rel="manifest" href="{{ site.url }}/site.webmanifest">
+
+	<!-- Footer Updater -->
+	<script>
+		const desiredRepo = "mmcinnestaylor.github.io";
+		const dateTagID = "updated"; // The HTML element you want to update
+		var xhttp = new XMLHttpRequest();
+
+		xhttp.onreadystatechange = function () {
+			if (this.readyState == 4 && this.status == 200) {
+				let repos = JSON.parse(this.responseText);
+
+				repos.every((repo) => {
+					if (repo.name == desiredRepo) {
+						var lastUpdated = new Date(repo.pushed_at);
+						var day = lastUpdated.getUTCDate();
+						var month = lastUpdated.getUTCMonth() + 1;
+						var year = lastUpdated.getUTCFullYear();
+						document.getElementById(dateTagID).innerHTML = `Last updated: ${year}-${month}-${day}`;
+						return false;
+					}
+					return true;
+				});
+			}
+		};
+
+		xhttp.open("GET", "https://api.github.com/users/mmcinnestaylor/repos", true);
+		xhttp.send();
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ0560QKBT"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-WZ0560QKBT');
+	</script>
+</head>
+
+<body>
+	<!-- Primary Page Layout
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+	<div class="container">
+		{{ content }}
+
+		<footer>
+			<em><small id="updated"></small></em>
+		</footer>
+	</div>
+	<!-- End Document
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+</html>
