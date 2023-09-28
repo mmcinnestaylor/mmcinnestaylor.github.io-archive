@@ -1,7 +1,8 @@
 encoding: UTF-8
 timezone: America/Chicago
+
 defaults:
   - scope:
-      path: "assets/images"
+      path: "assets/img"
     values:
       image: true
