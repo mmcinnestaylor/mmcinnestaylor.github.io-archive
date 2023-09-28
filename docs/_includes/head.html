@@ -1,0 +1,47 @@
+{% if page.title == "Home" %}
+<title>Marlan McInnes-Taylor</title>
+{% else %}
+<title>{{ page.title }}&puncsp;|&puncsp;Marlan McInnes-Taylor</title>
+{% endif %}
+<!-- Metas
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<meta charset="utf-8">
+<meta name="author" content="Marlan McInnes-Taylor">
+<meta name="description" content="Homepage of Marlan McInnes-Taylor, Artificial Intelligence researcher.">
+<meta name="keywords"
+	content="Marlan, Marlan McInnes, Marlan Taylor, McInnes-Taylor, Marlan McInnes-Taylor,  mmcinnestaylor, Marlan FSU, Marlan Florida State University, Marlan UT Austin, Marlan The University of Texas at Austin,">
+{% if page.noindex and page.nofollow %}
+<meta name="robots" content="noindex, nofollow">
+{% elsif page.noindex %}
+<meta name="robots" content="noindex">
+{% elsif page.nofollow %}
+<meta name="robots" content="nofollow">
+{% endif %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- CSS
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link href="{{ '/assets/css/main.css' | relative_url }}" rel="stylesheet">
+{% if page.style %}
+<!-- Page Specific CSS
+		–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="{{ site.url }}/assets/css/{{ page.style }}.css">
+{% endif %}
+<!-- Academicons
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="stylesheet" href="{{ '/assets/academicons/css/academicons.min.css' | relative_url }}">
+<!-- Favicon
+			–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/favicon/apple-touch-icon.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/favicon/favicon-32x32.png' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/assets/favicon/favicon-16x16.png' | relative_url }}">
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon/favicon.ico' | relative_url }}">
+<!-- Global site tag (gtag.js) - Google Analytics
+				–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ0560QKBT"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'G-WZ0560QKBT');
+</script>
