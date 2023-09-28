@@ -2,3 +2,15 @@ pages:
 
 - title: Home
   url: index.html
+
+- title: About
+  url: about.html
+
+- title: News
+  url: news.html
+
+- title: Research
+  url: research.html
+
+- title: Projects
+  url: projects.html
