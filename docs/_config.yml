@@ -6,3 +6,8 @@ defaults:
       path: "assets/img"
     values:
       image: true
+
+collections_dir: collections
+collections:
+  - news
+  - posts
