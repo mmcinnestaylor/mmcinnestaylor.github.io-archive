@@ -11,3 +11,8 @@ collections_dir: collections
 collections:
   - news
   - posts
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
