@@ -1,0 +1,12 @@
+---
+layout: base
+---
+{% if page.hide-header != true %}
+    {% include header.html %}
+{% endif %}
+
+<main>{{ content }}</main>
+
+{% if page.hide-footer != true %}
+    {% include footer.html %}
+{% endif %}

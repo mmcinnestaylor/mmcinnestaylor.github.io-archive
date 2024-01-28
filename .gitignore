@@ -1,3 +1,4 @@
 .vscode/settings.json
 _site
 .jekyll-cache
+.DS_Store
